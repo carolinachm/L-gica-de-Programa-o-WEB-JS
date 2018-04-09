@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calculadora High Tech</title>
+
+    <style>
+        #calculadora {
+            background-color: #dae8fc;
+            width: 400px;
+            padding:40px;
+            margin: auto;
+            border-radius: 30px;
+            color: #5745f8;
+            
+            
+        }
+        #calculadora div{
+            text-align: center;
+        }
+        #calculadora h1{
+           color: blue;
+            
+        }
+        #calculadora label{
+            color:darkgray;
+            
+            
+        }
+        #calculadora input{
+            padding: 5px;
+            border-radius: 40px;
+            
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="calculadora">
+        <div>
+            <h1>Calculadora High Tech</h1>
+
+        </div>
+
+        <div>
+            <label>Numero 1</label>
+
+        </div>
+
+        <div>
+            <input type="text" name="numero1" value="">
+        </div>
+        <div>
+            <label>Numero 2</label>
+        </div>
+        <div>
+            <input type="text" name="numero2" value="">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Cancelar">
+        </div>
+
+
+    </div>
+
+
+
 </body>
+
 </html>
