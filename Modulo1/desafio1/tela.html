@@ -46,12 +46,12 @@
                 <input type="button" name="limpar" class="num" value="AC" onClick="calculadora.limpar();" />
                 <input type="button" name="num0" class="num" value="0" onclick="calculadora.botao(0);" />
                 <input type="button" name="igual" class="num" value="=" onclick="calculadora.calcular();" />
-                <input type="button" name="dividir" class="oper" value="+" onclick="calculadora.botao('+');somarValor();" />
+                <input type="button" name="dividir" class="oper" value="+" onclick="calculadora.botao('+');calculadora.calculadora();" />
               
             </div>
             <div>
                     <input type="button" value="." onclick="calculadora.botao('.') ;" />
-                    <input type="button" name="num%" class="num" value="%" onclick="calculadora.botao('%')"/>
+                    <input type="button" name="num%" class="num" value="%" onclick="calculadora.botao('%'); calculadora.porcentagem()"/>
                
             </div>
             <br>

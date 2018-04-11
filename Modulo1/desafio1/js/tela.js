@@ -29,18 +29,18 @@ class Calcularoda {
     dividirValor() {
         var s1 = parseFloat(document.getElementById("s1").value);
         var s2 = parseFloat(document.getElementById("s2").value);
-        var result, total;
-        result = valor / 100;
-        total = valor - (porcentagem * result);
-        document.getElementById('resultado').value = total;
+        var resultado = s1 / s2;
+        document.getElementById('resultado').value = resultado;
+        
     }
     porcentagem() {
         //1) ler dados convertido em numeros dos inputs
         var s1 = parseFloat(document.getElementById("s1").value);
         var s2 = parseFloat(document.getElementById("s2").value);
-        //realizar a soma
-        var resultado = parseFloat(s1 * (s2 / 100));
-        document.getElementById('resultado').value = resultado;
+        var result, total;
+        result = s1 / 100;
+        total = s1 - (s2 * result);
+        document.getElementById('result').value = total;
     }
     limpar() {
         //limpar os campos
