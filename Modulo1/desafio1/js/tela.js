@@ -1,12 +1,57 @@
 "user strict";
 
-function somarValores(){
-    var s1 = document.getElementById("numero1").value;
-    var s2 = document.getElementById("numero2").value;
-        var s3 = s1*s2;
-        alert(s3);
+class Calcularoda{
+
+    botao(valor){
+        document.calc.visor.value += valor;
+    }
+
+     somarValor(){
+        //1) ler dados convertido em numeros dos inputs
+        var s1 = parseFloat(document.getElementById("s1").value);
+        var s2 = parseFloat(document.getElementById("s2").value);
+        //realizar a soma
+        var resultado = s1+s2;
+        document.getElementById('resultado').value = resultado;
+    }
+     subtrairValor(){
+        var s1 = parseFloat(document.getElementById("s1").value);
+        var s2 = parseFloat(document.getElementById("s2").value);
+        var resultado = s1-s2;
+        document.getElementById('resultado').value = resultado;
+    }
+     multiplicarValor(){
+        var s1 = parseFloat(document.getElementById("s1").value);
+        var s2 = parseFloat(document.getElementById("s2").value);
+        var resultado = s1 * s2;
+        document.getElementById('resultado').value = resultado;
+    }
+     dividirValor(){
+        var s1 = parseFloat(document.getElementById("s1").value);
+        var s2 = parseFloat(document.getElementById("s2").value);
+        var resultado = s1 / s2;
+        document.getElementById('resultado').value = resultado;
+    }
+     porcentagem(){
+        //1) ler dados convertido em numeros dos inputs
+        var s1 = parseFloat(document.getElementById("s1").value);
+        var s2 = parseFloat(document.getElementById("s2").value);
+        //realizar a soma
+        var resultado = parseFloat(s1*(s2/100));
+        document.getElementById('resultado').value = resultado;
+    }
+     limpar(){
+         //limpar os campos
+         document.calc.visor.value = '';
+    }
+    calcular(){
+        var resultado = 0;
+        resultado =document.calc.visor.value;
+        document.calc.visor.value = '';
+        document.calc.visor.value = eval(resultado);
+    }
+
 }
-function limpar(){
-    document.getElementById("numero1").value;
-    document.getElementById("numero2").value;
-}
+//instancia objeto
+var calculadora = new Calcularoda();
+
