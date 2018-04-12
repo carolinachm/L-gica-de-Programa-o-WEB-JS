@@ -1,6 +1,6 @@
 "user strict";
 
-class Calcularoda {
+class Calculadora {
 
     botao(valor) {
         document.calc.visor.value += valor;
@@ -37,10 +37,8 @@ class Calcularoda {
         //1) ler dados convertido em numeros dos inputs
         var s1 = parseFloat(document.getElementById("s1").value);
         var s2 = parseFloat(document.getElementById("s2").value);
-        var result, total;
-        result = s1 / 100;
-        total = s1 - (s2 * result);
-        document.getElementById('result').value = total;
+        var resultado = s1 * (s2/100);
+        document.getElementById('resultado').value = resultado;
     }
     limpar() {
         //limpar os campos
@@ -55,5 +53,5 @@ class Calcularoda {
 
 }
 //instancia objeto
-var calculadora = new Calcularoda();
+var calculadora = new Calculadora();
 

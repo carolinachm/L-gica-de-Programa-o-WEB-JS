@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #6f6f6f;
+    font-size: 13px;
+    text-align: justify;
+}
+#cabecalho{
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+}
+#cabecalho h1, #cabecalho p{
+    margin: 0;
+    padding: 0;
+}
+#cabecalho h1{
+    font-size: 52px;
+    color: #20a001;
+}
+#cabecalho p{
+    margin-top: 0px;
+    margin-left: 30px;
+    padding: 0 0 0 4px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #86ea66;
+    text-transform: uppercase;
+
+}
+#pagina{
+    width: 800px;
+    margin: 0 auto;
+    padding: 0px;
+    background: #ffffff;
+    box-shadow: 5px 4px 10px #333, -5px -5px 10px #ccc;
+}
+#tituloPrincipal{
+    text-transform: uppercase;
+    background: #20a001;
+    color: #fff;
+    font-size: 15px;
+}
+#formulario{
+    margin: 20px;
+}
+#formulario input, textarea, select, option, body{
+    font-family: 'Times New Roman', Times, serif;
+    color: #83826a;
+}
+fieldset{
+    border-radius: 5px;
+    border: none;
+}
+#tbImg, #dadospessoais, #formacao,#endereco{
+    border: none;
+}
+table td, table tr {border: 0px;}
+
+input[type="text"],
+input[type="data"],
+input select{
+    width: 200px;
+}
