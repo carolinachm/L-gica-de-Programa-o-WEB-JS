@@ -9,7 +9,7 @@ class Media{
         //calcular media
         var media =parseFloat((n1 + n2)/2);
 
-        document.getElementById('media').value;
+       alert(media);
        
     }
 }

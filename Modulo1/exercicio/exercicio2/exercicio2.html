@@ -8,7 +8,8 @@
     <title>Cadastro de Cliente</title>
 
     <link rel="stylesheet" type="text/css" href="css/exercicio2.css">
-    <script src="js/exercicio2.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cadastro.js"></script>
 </head>
 
 <body>
@@ -30,67 +31,59 @@
         </div>
         <form>
             <div>
-
-                <div class="campo">
-                    <input type="text" name="nome" placeholder="Nome" value="" />
+                <input type="text" placeholder="Nome" id="nome"/>
+            </div>
+            <div>
+                <input type="email" placeholder="E-mail" id="email"/>
+            </div>
+        
+            <div>
+                <label for="m">Masculino</label>
+                <input type="radio" name="sexo" value="m" id="m"/>
+            
+                <label for="f">Feminino</label>
+                <input type="radio" name="sexo" value="f" id="f"/>
+            </div>
+            <fieldset>
+                <legend>Cursos de Intereresse</legend>
+                <div>
+                    <input type="checkbox" id="web" name="curso" /> 
+                    <label for="web"> Curso de Desenvolvimento Web</label>
                 </div>
-                <div class="campo">
-                    <input type="text" name="email" placeholder="e-mail" value="" />
-                </div>
-                <div class="campo">
-                    <input type="text" id="telefone" name="telefone" placeholder="(99)9999-9999" value="">
-                </div>
-                <div class="campo">
-                    <label>Sexo:</label>
 
-                    <label for="m" class="checkbox">Masculino</label>
-                    <input type="radio" name="sexo" />
-                    <label for="f" class="checkbox">Feminino</label>
-                    <input type="radio" name="sexo" />
-
-
+                <div>
+                    <input type="checkbox" id="mobile" name="curso"/> 
+                    <label for="mobile"> Curso de Desenvolvimento Mobile</label>
                 </div>
                 <div>
-
-                    <fieldset class="grupo">
-                        <legend>Curos de interesse</legend>
-                        <div class="campo">
-                            <input type="checkbox" name="opcao" id="web" />
-                            <label>Curso de desenvolvimento web</label>
-                        </div>
-
-                        <div class="campo">
-                            <input type="checkbox" name="opcao" id="moblie" />
-                            <label>Curso de desenvolvimento moblie</label>
-                        </div>
-
-                        <div class="campo">
-                            <input type="checkbox" name="opcao" id="desktop" />
-                            <label>Curso de desenvolvimento desktop</label>
-                        </div>
-
-                    </fieldset>
+                    <input type="checkbox" id="desktop" name="curso"/> 
+                    <label for="desktop"> Curso de Desenvolvimento Desktop</label>
                 </div>
-                <div class="campo">
-                    <label for="estado">Estado</label>
-                    
-                </div>
-                <div class="campo">
-                    Foto:
-                    <form action="">
-                        <input type="file" name="pic" accept="image/*">
-                        <input type="submit">
-                    </form>
-                </div>
-                <div class="campo">
-                    <label for="data">Data de Nascimento</label>
-                    <input id="data" type="datetime-local" />
-                </div>
-                <button type="submit" class="botao submit">Salvar</button>
+            </fieldset>
+            <div>
+                <label for="estado"> Estado </label>
+                <select id="estado">
+                        <option value=""> Nenhum </option>
+                        <option value="MS" selected> Mato Grosso do Sul</option>
+                        <option value="SP"> São Paulo</option>
+                        <option value="RJ"> Rio de Janeiro</option>
+                </select>
             </div>
-        </form>
-    </main>
+            <div>
+                <label>Foto</label>
+                <input type="file"  id="foto"/>
+            </div>
+            <div>
+                <label for="data" class="centro">Data Nascimento</label>
+                <input type="datetime-local" id="data">
+            </div>
+            <div class="centro">
+                <button type="button" onclick="cadastro.validar()">Salvar</button>
+            </div>
+
+    </form>
+
+</main>
 
 </body>
-
 </html>
